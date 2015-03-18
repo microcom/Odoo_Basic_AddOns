@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="demo_view_order_form">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//tree//field[@name='price_unit']" position="after">
+                    <field name="line_bidou"/>
+                </xpath>
+                <xpath expr="//group[@name='sale_total']" position="before">
+                    <group>
+                        <field name="bidou"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="demo_report_saleorder" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@t-if='o.payment_term']" position="after">
+            <div class="col-xs-3">
+                <strong>Bidou:</strong>
+                <p t-field="o.bidou"/>
+            </div>
+        </xpath>
+    </template>
+
+</data>
+</openerp>
