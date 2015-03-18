@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_field
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-18 17:17+0000\n"
+"PO-Revision-Date: 2015-03-18 13:19-0500\n"
+"Last-Translator: Stéphane Le Cornec <slc@microcom.ca>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: partner_field
+#: selection:res.partner,favorite_color:0
+msgid "Blue"
+msgstr "Bleu"
+
+#. module: partner_field
+#: field:res.partner,favorite_color:0
+msgid "Favorite Color"
+msgstr "Couleur préférée"
+
+#. module: partner_field
+#: selection:res.partner,favorite_color:0
+msgid "Green"
+msgstr "Vert"
+
+#. module: partner_field
+#: model:ir.model,name:partner_field.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: partner_field
+#: selection:res.partner,favorite_color:0
+msgid "Red"
+msgstr "Rouge"
