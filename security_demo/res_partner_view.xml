@@ -13,6 +13,7 @@
                             <tree editable="bottom">
                                 <field name="name"/>
                                 <field name="birthdate"/>
+                                <field name="sex" groups="security_demo.group_animal_pet_manager"/>
                             </tree>
                         </field>
                     </page>

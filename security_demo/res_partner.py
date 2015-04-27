@@ -14,4 +14,5 @@ class animal_pet(models.Model):
 
     name = fields.Char(string='Name')
     birthdate = fields.Date(string='Birthdate', groups='security_demo.group_animal_pet_manager')
+    sex = fields.Selection([('masculin', 'Masculin'), ('feminin', 'Féminin')], string='Sex')
     partner_id = fields.Many2one('res.partner')
