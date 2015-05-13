@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="birthdate_widget_view_partner_form">
+            <field name="name">birthdate_widget.res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="date" position="replace">
+                    <field name="date" widget="birthdate" required="1"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
