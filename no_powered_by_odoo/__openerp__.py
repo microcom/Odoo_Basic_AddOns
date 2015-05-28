@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "no_powered_by_odoo",
-    'version': '1.0',
+    'version': '1.1',
     'category' : 'demo',
     'summary': """
         Removes "Powered by Odoo" branding.""",
