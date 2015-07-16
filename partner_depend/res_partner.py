@@ -24,3 +24,10 @@ class res_partner(models.Model):
     test_change = fields.Char('Change')
     depend_master = fields.Char('Depend Master', compute=_compute_master)
     depend_change = fields.Char('Depend Change', compute=_compute_change)
+
+    test_master2 = fields.Char(related='test_master')
+
+    @api.one
+    @api.onchange('test_master2')
+    def onchange_two(self):
+        self.test_master = self.test_master2

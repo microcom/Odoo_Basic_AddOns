@@ -12,6 +12,7 @@
                     <field name="depend_master"/>
                     <field name="test_change"/>
                     <field name="depend_change"/>
+                    <field name="test_master2"/>
                 </field>
             </field>
         </record>
