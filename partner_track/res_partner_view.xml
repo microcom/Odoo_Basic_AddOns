@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="demo_view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </field>
+                <field name="website" position="after">
+                    <field name="supervisor_id"/>
+                    <field name="alternate_supervisor_id"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
