@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
+# noinspection PyStatementEffect
 {
     'name': "no_powered_by_odoo",
     'version': '1.1',
-    'category' : 'demo',
+    'category': 'demo',
     'summary': """
         Removes "Powered by Odoo" branding.""",
     'description': """

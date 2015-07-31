@@ -1,7 +1,8 @@
+# noinspection PyStatementEffect
 {
     'name': 'sale_field',
     'version': '1.0',
-    'category' : 'demo',
+    'category': 'demo',
     'description': """
 Demo fields.
 ============

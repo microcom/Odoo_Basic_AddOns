@@ -1,7 +1,8 @@
+# noinspection PyStatementEffect
 {
     'name': 'partner_field',
     'version': '1.0',
-    'category' : 'demo',
+    'category': 'demo',
     'description': """
 Demo fields.
 ============

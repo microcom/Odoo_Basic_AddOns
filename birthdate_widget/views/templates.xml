@@ -5,7 +5,7 @@
     <data>
         <template id="assets_backend" name="birthdate_widget assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/birthdate_widget/static/src/js/birthdate_picker.js"></script>
+                <script type="text/javascript" src="/birthdate_widget/static/src/js/birthdate_picker.js"/>
             </xpath>
         </template>
     </data>

@@ -1,5 +1,5 @@
 # coding: utf-8
-from openerp import models, fields, api
+from openerp import fields, models
 
 COLORS = [
     ('red', 'Red'),
@@ -8,7 +8,7 @@ COLORS = [
 ]
 
 
-class res_partner(models.Model):
+class ResPartner(models.Model):
     _inherit = "res.partner"
 
     favorite_color = fields.Selection(COLORS, 'Favorite Color', default='blue')

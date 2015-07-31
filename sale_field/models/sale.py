@@ -1,8 +1,8 @@
 # coding: utf-8
-from openerp import models, fields, api
+from openerp import api, fields, models
 
 
-class sale_order_line(models.Model):
+class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
     @api.one
@@ -12,7 +12,7 @@ class sale_order_line(models.Model):
     line_bidou = fields.Integer('Bidou', compute=_compute_line_bidou)
 
 
-class sale_order(models.Model):
+class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     @api.one

@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_animal_pet_assistant,animal.pet_assistant,model_animal_pet,security_demo.group_animal_pet_assistant,1,1,1,1
-access_animal_pet_user,animal.pet_user,model_animal_pet,security_demo.group_animal_pet_user,1,0,0,0
+access_animal_pet_assistant,animal.pet_assistant,model_animal_pet,security_demo.animal_pet_group_assistant,1,1,1,1
+access_animal_pet_user,animal.pet_user,model_animal_pet,security_demo.animal_pet_group_user,1,0,0,0
