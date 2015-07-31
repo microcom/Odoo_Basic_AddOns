@@ -14,7 +14,7 @@ It demos security.
     'demo': [],
     'test': [],
     'data': [
-        'res_partner_view.xml'
+        'views/res_partner_view.xml'
     ],
     'auto_install': False,
     'installable': True,

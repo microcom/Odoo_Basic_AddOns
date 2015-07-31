@@ -14,9 +14,9 @@ It demos security.
     'demo': [],
     'test': [],
     'data': [
-        'res_partner_view.xml',
-        'security/security.xml',
+        'security/animal_pet_security.xml',
         'security/ir.model.access.csv'
+        'views/res_partner_view.xml',
     ],
     'auto_install': False,
     'installable': True,

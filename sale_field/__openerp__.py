@@ -14,8 +14,8 @@ It demos fields.
     'demo': [],
     'test': [],
     'data': [
-        'sale_view.xml',
         'views/report_saleorder.xml',
+        'views/sale_view.xml',
     ],
     'auto_install': False,
     'installable': True,
