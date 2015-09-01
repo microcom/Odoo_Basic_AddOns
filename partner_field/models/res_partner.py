@@ -11,4 +11,4 @@ COLORS = [
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    favorite_color = fields.Selection(COLORS, 'Favorite Color', default='blue')
+    favorite_color = fields.Selection(COLORS, string='Favorite Color', default='blue')

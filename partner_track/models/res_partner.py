@@ -53,5 +53,5 @@ class ResPartner(models.Model):
         if not current_supervisor_id:
             # new alternate or removed supervisor
             if 'alternate_supervisor_id' in values or 'supervisor_id' in values:
-                user_id = self.env['res.users'].browse(current_alternate_id)
-                self.message_subscribe([user_id.partner_id.id])
+                user = self.env['res.users'].browse(current_alternate_id)
+                self.message_subscribe([user.partner_id.id])

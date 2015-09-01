@@ -16,7 +16,7 @@ It demos fields.
     'test': [],
     'data': [
         'views/report_saleorder.xml',
-        'views/sale_view.xml',
+        'views/sale.xml',
     ],
     'auto_install': False,
     'installable': True,
