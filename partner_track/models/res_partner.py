@@ -6,7 +6,6 @@ from openerp import api, fields, models
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-
     # by default, the user creating a partner becomes a follower of those messages
     @api.model
     def create(self, values):
@@ -16,10 +15,8 @@ class ResPartner(models.Model):
         created.subscribe_conditionals(values)
         return created
 
-
     # fields named 'user_id' with track_visibility set are automatically subscribed
     user_id = fields.Many2one(track_visibility='always')
-
 
     # other fields with track_visibility must be added to auto_follow_fields
     # note that hr_employee removes the need for track_visibility
@@ -32,7 +29,6 @@ class ResPartner(models.Model):
         # noinspection PyProtectedMember
         return super(ResPartner, self)._message_get_auto_subscribe_fields(cr, uid, updated_fields, auto_follow_fields,
                                                                           context=context)
-
 
     # if subscribed under complex conditions, we must call message_subscribe() ourselves
     alternate_supervisor_id = fields.Many2one('res.users', 'Alternate')

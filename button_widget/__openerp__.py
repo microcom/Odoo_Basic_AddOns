@@ -1,23 +1,23 @@
 {
     'name': 'button_widget',
-    'version':'1.0',
-    'category' : 'Hidden',
+    'version': '1.0',
+    'category': 'Hidden',
     'description': """
 Widget for boolean fields
 ==========================
 
 This makes a boolean in form of a button
     """,
-    'author':'Microcom',
-    'images':[],
-    'depends':['web'],
-    'demo':[],
+    'author': 'Microcom',
+    'images': [],
+    'depends': ['web'],
+    'demo': [],
     'test': [],
-    'data':[
+    'data': [
         'views/res_partner.xml',
         'views/templates.xml'
     ],
-    'qweb' : [
+    'qweb': [
         'static/src/xml/*.xml',
     ],
     'auto_install': False,
