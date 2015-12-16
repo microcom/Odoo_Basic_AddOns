@@ -1,7 +1,7 @@
 # noinspection PyStatementEffect
 {
     'name': 'security_demo',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'category': 'demo',
     'description': """
 Demo security.
