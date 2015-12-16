@@ -7,6 +7,8 @@ Unit test examples
 ==========================
 
 Simple unit test examples
+
+Note: you need to uncomment lines 21 to 24 in 'tests/test_res_partner.py' in order to run the second test.
     """,
     'author': 'Microcom',
     'images': [],

@@ -17,7 +17,8 @@ class testResPartner(common.TransactionCase):
 
     # The second test (failure)
     # @common.expectedFailure()
-    def test__onchange_increase_age_fail(self):
-        print("Second test:")
-        self.partner._onchange_increase_age()
-        self.assertEqual(self.partner.age, 29, "The test #2 has failed!")
+        # IMPORTANT NOTE: You must uncomment the following lines to run the test!
+    # def test__onchange_increase_age_fail(self):
+    #     print("Second test:")
+    #     self.partner._onchange_increase_age()
+    #     self.assertEqual(self.partner.age, 29, "The test #2 has failed!")
