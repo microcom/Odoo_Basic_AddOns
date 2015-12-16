@@ -16,7 +16,7 @@ It demos security.
     'test': [],
     'data': [
         'security/animal_pet_security.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
         'views/res_partner.xml',
     ],
     'auto_install': False,
