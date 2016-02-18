@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report
+            string="Skid Label"
+            id="action_skid_label"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            name="skid_label.print_skid_label"
+            file="skid_label.print_skid_label"
+        />
+
+        <record id="paperformat_skid_label" model="report.paperformat">
+            <field name="name">Skid Label</field>
+            <field name="format">Letter</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">20</field>
+            <field name="margin_left">20</field>
+            <field name="margin_right">20</field>
+            <field name="margin_bottom">20</field>
+            <field name="header_spacing">0</field>
+        </record>
+
+        <record id="action_skid_label" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_skid_label"/>
+        </record>
+
+    </data>
+</openerp>

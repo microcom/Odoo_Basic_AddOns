@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="print_skid_label">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" />
+                <div class="page skid">
+                    <div class="address" t-field="o.partner_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                    <div class="poNumber">
+                        <u>PO# &amp;nbsp; <span t-field="o.origin"/></u>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
