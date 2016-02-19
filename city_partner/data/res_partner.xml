@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report
+            string="Neighbors"
+            id="action_city_partner"
+            model="res.partner"
+            report_type="qweb-pdf"
+            name="city_partner.print_city_partner"
+            file="city_partner.print_city_partner"
+        />
+
+    </data>
+</openerp>

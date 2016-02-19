@@ -1,0 +1,6 @@
+
+div.city_name {position: absolute; top: 0.5in; left: 0.5in; width: 5in; text-align: left; font-size: 3em;}
+div.city_city {position: absolute; top: 1.5in; left: 0.5in; width: 5in; text-align: left; font-size: 3em;}
+div.city_address {position: absolute; top: 1in; left: 6in; width: 3in; text-align: left;}
+table.neighbors {position: absolute; top: 3in; left: 0.5in; width: 8.5in; line-height: 2em; font-size: 1.5em;}
+div.city_page_no {position: absolute; top: 0.5in; left: 9in; width: 3in; text-align: left;}

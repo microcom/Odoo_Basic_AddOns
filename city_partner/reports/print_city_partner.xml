@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="print_city_partner">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-foreach="paginate(o)" t-as="page">
+                    <div class="page">
+                        <div class="city_section">
+                            <div class="city_name"><span t-field="o.name"/></div>
+                            <div class="city_city"><span t-field="o.city"/></div>
+                            <div class="city_page_no">
+                                <span t-raw="page['page_no']"/>&amp;nbsp;/&amp;nbsp;<span t-raw="page['page_max']"/>
+                            </div>
+                            <div class="city_address" t-raw="o.contact_address.replace('\n', '&lt;br/&gt;')"/>
+                        </div>
+                        <div class="neighbor_section">
+                            <table class="table-condensed neighbors">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left col-xs-5">Name</th>
+                                        <th class="text-left col-xs-2">Postal Code</th>
+                                        <th class="text-right col-xs-5">Street</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="page['neighbors']" t-as="neighbor">
+                                        <tr>
+                                            <td class="text-left"><span t-field="neighbor.name"/></td>
+                                            <td class="text-left"><span t-field="neighbor.zip"/></td>
+                                            <td class="text-right">
+                                                <span t-field="neighbor.street"/>&amp;nbsp;
+                                                <span t-field="neighbor.street2"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
