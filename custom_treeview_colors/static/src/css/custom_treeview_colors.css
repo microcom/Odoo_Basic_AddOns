@@ -1,0 +1,36 @@
+/********************************************************
+Odoo automatically alternate the rows' background color.
+This is why, when we're modifying the background color,
+we must specify the component hierarchy with the ">"
+selector, make sure the style is applied to every child
+with the "nth_child" pseudo-class and to specify a new
+background image (or like in this case: none).
+**********************************************************/
+.oe_list_content > tbody > tr.blue-background:nth-child(n) {
+    background-color: #1a8cff;
+    background-image: none;
+}
+
+.oe_list_content > tbody > tr.red-background:nth-child(n) {
+    background-color: #990000;
+    background-image: none;
+}
+
+.oe_list_content > tbody > tr.yellow-background:nth-child(n) {
+    background-color: #e6b800;
+    background-image: none;
+}
+
+/********************************************************
+Modifying a font color is much more simpler than modifying
+the background. Simply select the css class and apply the
+style.
+**********************************************************/
+.green-font {
+    color: #009900;
+}
+
+.yellow-font {
+    color: #e6b800;
+}
+

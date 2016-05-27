@@ -1,0 +1,35 @@
+<openerp>
+    <data>
+        <!--  -->
+        <record id="object0" model="custom_treeview_colors.custom_treeview_colors">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+            <field name="description">This is a description</field>
+        </record>
+        <!--  -->
+        <record id="object1" model="custom_treeview_colors.custom_treeview_colors">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+            <field name="description">This is yet another description</field>
+        </record>
+        <!--  -->
+        <record id="object2" model="custom_treeview_colors.custom_treeview_colors">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+            <field name="description">Description of Object 2</field>
+        </record>
+        <!--  -->
+        <record id="object3" model="custom_treeview_colors.custom_treeview_colors">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+            <field name="description">Damn Daniel!</field>
+        </record>
+        <!--  -->
+        <record id="object4" model="custom_treeview_colors.custom_treeview_colors">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+            <field name="description">I don't know what to write anymore...</field>
+        </record>
+        <!--  -->
+    </data>
+</openerp>

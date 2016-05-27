@@ -1,0 +1,64 @@
+<openerp>
+  <data>
+
+    <template id="custom_treeview_colors.assets_backend" name="custom_treeview_colors assets" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/custom_treeview_colors/static/src/js/custom_treeview_colors.js"/>
+        <link rel="stylesheet" href="/custom_treeview_colors/static/src/css/custom_treeview_colors.css"/>
+      </xpath>
+    </template>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="custom_treeview_colors.list">
+      <field name="name">custom_treeview_colors list</field>
+      <field name="model">custom_treeview_colors.custom_treeview_colors</field>
+      <field name="arch" type="xml">
+        <tree blue-background="value &gt; 20 and value &lt; 31" decoration-info="value &lt; 5"
+              green-font="value &gt; 35" red-background="value == 20" yellow-background="value &lt; 20"
+              yellow-font="value &gt; 19 and value &lt; 31">
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="custom_treeview_colors">
+      <field name="name">custom_treeview_colors window</field>
+      <field name="res_model">custom_treeview_colors.custom_treeview_colors</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="custom_treeview_colors.action_server">
+      <field name="name">custom_treeview_colors server</field>
+      <field name="model_id" ref="model_custom_treeview_colors_custom_treeview_colors"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <menuitem name="custom_treeview_colors" id="custom_treeview_colors.menu_root" action="custom_treeview_colors"/>
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="custom_treeview_colors.menu_1" parent="custom_treeview_colors.menu_root"/>
+    <menuitem name="Menu 2" id="custom_treeview_colors.menu_2" parent="custom_treeview_colors.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="custom_treeview_colors.menu_1_list" parent="custom_treeview_colors.menu_1"
+              action="custom_treeview_colors.action_window"/>
+    <menuitem name="Server to list" id="custom_treeview_colors" parent="custom_treeview_colors.menu_2"
+              action="custom_treeview_colors.action_server"/>
+    -->
+  </data>
+</openerp>
