@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="state_new" model="bugs.state">
+        <field name="name">New</field>
+        <field name="sequence" eval="1"/>
+    </record>
+    <record id="state_in_progress" model="bugs.state">
+        <field name="name">In Progress</field>
+        <field name="sequence" eval="2"/>
+    </record>
+    <record id="state_close" model="bugs.state">
+        <field name="name">Close</field>
+        <field name="sequence" eval="3"/>
+    </record>
+
+    <record id="bug_priority_low" model="bugs.priority">
+        <field name="name">Low</field>
+        <field name="color">#339933</field>
+    </record>
+    <record id="bug_priority_medium" model="bugs.priority">
+        <field name="name">Medium</field>
+        <field name="color">#e6e600</field>
+    </record>
+    <record id="bug_priority_high" model="bugs.priority">
+        <field name="name">High</field>
+        <field name="color">#ff3333</field>
+    </record>
+
+</odoo>

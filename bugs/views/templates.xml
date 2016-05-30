@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="bugs.assets_backend" name="bugs assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/bugs/static/src/js/kanban_records.js"/>
+            <script type="text/javascript" src="/bugs/static/src/js/kanban_column.js"/>
+        </xpath>
+    </template>
+</odoo>

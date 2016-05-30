@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Action to open Bug list -->
+        <act_window id="action_bug"
+                    name="Bug"
+                    res_model="bugs.bug"
+                    view_mode="tree,form,kanban" />
+
+        <!-- Menu Item to open Bug list -->
+        <menuitem id="menu_bug"
+                    name="Bugs"
+                    sequence="20"
+                    action="action_bug" />
+
+        <!-- Bug Form view -->
+        <record id="view_form_bug" model="ir.ui.view">
+            <field name="name">Bug Form</field>
+            <field name="model">bugs.bug</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="priority"/>
+                            </group>
+                            <group>
+                                <field name="state"/>
+                                <field name="detection_date"/>
+                                <field name="estimated_time"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Bug List view -->
+        <record id="view_tree_bug" model="ir.ui.view">
+            <field name="name">Bug Tree</field>
+            <field name="model">bugs.bug</field>
+            <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="state"/>
+                <field name="detection_date"/>
+                <field name="estimated_time"/>
+            </tree>
+            </field>
+        </record>
+
+        <!-- todays bugs filter -->
+        <record id="filter_bugs_today" model="ir.filters">
+            <field name="name">Today</field>
+            <field name="model_id">bugs.bug</field>
+            <field name="domain">[('detection_date', '=', context_today().strftime('%Y-%m-%d'))]</field>
+        </record>
+
+        <!-- Bug Search view -->
+        <record id="view_filter_bug" model="ir.ui.view">
+            <field name="name">Bug Filter</field>
+            <field name="model">bugs.bug</field>
+            <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="New Bugs" name="state"
+                        domain="[('state.name', '=', 'New')]" />
+            </search>
+            </field>
+        </record>
+
+        <!-- Kanban -->
+        <record id="view_bugs_bug_kanban" model="ir.ui.view">
+            <field name="name">bugs.bug.kanban</field>
+            <field name="model">bugs.bug</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="state" class="o_kanban_medium_column">
+                    <field name="name"/>
+                    <field name="detection_date"/>
+                    <field name="estimated_time"/>
+                    <field name="state"/>
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_res_partner_kanban" t-att-data-color="record.color.value">
+                                <div class="oe_kanban_details">
+                                    <div>
+                                        <ul t-att-style="'font-size: 10px;'">
+                                            <li>Name : <strong><field name="name"/></strong></li>
+                                            <li>Detection date : <strong><field name="detection_date"/></strong></li>
+                                            <li>Estimation (Hour): <strong><field name="estimated_time"/></strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</openerp>
